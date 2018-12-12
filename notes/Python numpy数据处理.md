@@ -129,3 +129,20 @@ X_batch = X[index]
 y_batch = y[index]
 ```
 
+**mean,std,keepdims 示例**
+
+```
+>>> a=np.asarray([[1,2,3],[4,5,6]])
+>>> a
+array([[1, 2, 3],
+       [4, 5, 6]])
+>>> a.mean(axis=0)
+array([2.5, 3.5, 4.5])
+>>> a.mean(axis=0,keepdims=True)
+array([[2.5, 3.5, 4.5]])
+>>> a.mean(axis=(0,1),keepdims=True)
+array([[3.5]])
+>>> a.mean(axis=(0,1))
+3.5
+```
+
